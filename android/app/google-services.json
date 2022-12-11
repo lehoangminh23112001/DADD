@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "763000153069",
+    "project_id": "dadd-fa139",
+    "storage_bucket": "dadd-fa139.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:763000153069:android:849a115472ce3bab877de4",
+        "android_client_info": {
+          "package_name": "com.example.dadd"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "763000153069-80rdnshtd0rjkj0inu1b8qvbsn6guhhr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGn4z8c92XRo6JP4-zT348GxeV66avLwY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "763000153069-80rdnshtd0rjkj0inu1b8qvbsn6guhhr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
