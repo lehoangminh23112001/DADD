@@ -1,5 +1,6 @@
 //import 'dart:ui';
-
+//import 'package:cloud_firestore/cloud_firestore.dart';
+//import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:dadd/screens/login.dart';
 //import 'package:google_fonts/google_fonts.dart';
@@ -20,6 +21,7 @@ class _RegisterState extends State<Register> {
     final userNameController = TextEditingController();
     final passWordController = TextEditingController();
     final confirmPasswordController = TextEditingController();
+    // final _auth = FirebaseAuth.instance;
     return Scaffold(
       body: Container(
         padding: EdgeInsets.fromLTRB(30, 0, 30, 0),
@@ -48,7 +50,6 @@ class _RegisterState extends State<Register> {
                 Text(
                   'Quiz & Quick',
                   style: TextStyle(
-                    
                     fontSize: 40,
                     foreground: Paint()
                       ..style = PaintingStyle.stroke
@@ -79,7 +80,8 @@ class _RegisterState extends State<Register> {
                     labelText: "UserName",
                     labelStyle: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Color.fromARGB(255, 38, 38, 44), fontSize: 15)),
+                        color: Color.fromARGB(255, 38, 38, 44),
+                        fontSize: 15)),
               ),
             ),
             Padding(
@@ -96,10 +98,9 @@ class _RegisterState extends State<Register> {
                     ),
                     obscureText: isHide,
                     decoration: InputDecoration(
-                      
                         labelText: "Password",
                         labelStyle: TextStyle(
-                          fontWeight: FontWeight.bold,
+                            fontWeight: FontWeight.bold,
                             color: Color.fromARGB(255, 38, 38, 44),
                             fontSize: 15)),
                   ),
@@ -136,7 +137,7 @@ class _RegisterState extends State<Register> {
                     decoration: InputDecoration(
                         labelText: "Confirm Password",
                         labelStyle: TextStyle(
-                          fontWeight: FontWeight.bold,
+                            fontWeight: FontWeight.bold,
                             color: Color.fromARGB(255, 38, 38, 44),
                             fontSize: 15)),
                   ),
@@ -153,6 +154,51 @@ class _RegisterState extends State<Register> {
             Container(
               padding: EdgeInsets.all(15),
               child: MaterialButton(
+                // onPressed: () async {
+                //   if (userNameController.text.isEmpty ||
+                //       passWordController.text.isEmpty ||
+                //       confirmPasswordController.text.isEmpty) {
+                //     ScaffoldMessenger.of(context).showSnackBar(
+                //       const SnackBar(
+                //         content: Text("Invalid information"),
+                //       ),
+                //     );
+                //   } else if (passWordController.text !=
+                //       confirmPasswordController.text) {
+                //     ScaffoldMessenger.of(context).showSnackBar(
+                //       const SnackBar(
+                //         content: Text("Confirm Password failed"),
+                //       ),
+                //     );
+                //   } else {
+                //     try {
+                //       final NewUser = _auth.createUserWithEmailAndPassword(
+                //           email: userNameController.text,
+                //           password: passWordController.text);
+
+                //       Map<String, dynamic> data = {
+                //         "Coin": 0,
+                //         "email": userNameController.text,
+                //         "name": userNameController.text,
+                //         "password": passWordController.text
+                //       };
+                //       FirebaseFirestore.instance.collection("users").add(data);
+                //       if (NewUser != null) {
+                //         Navigator.pop(context, 'Successfull!');
+                //       } else {
+                //         ScaffoldMessenger.of(context).showSnackBar(
+                //           const SnackBar(
+                //             content: Text("Account error"),
+                //           ),
+                //         );
+                //       }
+                //     } catch (e) {
+                //       final snackBar =
+                //           SnackBar(content: Text('Error!'));
+                //       ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                //     }
+                //   }
+                // },
                 onPressed: () {
                   Navigator.push(
                     context,
