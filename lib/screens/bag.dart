@@ -261,6 +261,7 @@ class _BagScreenState extends State<BagScreen> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
+                    
                     GestureDetector(
                       onTap: () {
                         Navigator.pop(context);

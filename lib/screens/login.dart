@@ -6,10 +6,10 @@ import 'package:flutter/material.dart';
 //import 'package:dadd/screens/myhome.dart';
 
 class Login extends StatelessWidget {
-  const Login({super.key});
+   Login({super.key});
 //class _LoginWidgetState extends State<Login> {
-  // final emailController = TextEditingController();
-  // final passwordController = TextEditingController();
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
 
   // @override
   // void dispose(){
@@ -87,7 +87,7 @@ class Login extends StatelessWidget {
               //username
               padding: const EdgeInsets.fromLTRB(0, 0, 0, 40),
               child: TextField(
-                //controller:  emailController,
+                controller:  emailController,
                 style: TextStyle(
                   fontSize: 18,
                   color: Colors.white,
@@ -107,7 +107,7 @@ class Login extends StatelessWidget {
                 alignment: AlignmentDirectional.centerEnd,
                 children: <Widget>[
                   TextField(
-                    //controller: passwordController,
+                    controller: passwordController,
                     style: TextStyle(
                       fontSize: 18,
                       color: Colors.white,
@@ -142,10 +142,98 @@ class Login extends StatelessWidget {
                 //onPressed: (){},
                 //onPressed: signIn,
                 onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => Myhome()),
-                  );
+                  if (emailController.text.trim() == '' ||
+                        passwordController.text.trim() == '') {
+                      showDialog(
+                        context: context,
+                        builder: (context) {
+                          return AlertDialog(
+                            title: Row(
+                              children: [
+                                Icon(Icons.warning),
+                                SizedBox(
+                                  width: 10.0,
+                                ),
+                                Text("Đăng nhập"),
+                              ],
+                            ),
+                            content: Text(
+                              "Đăng nhập thất bại",
+                            ),
+                            actions: [
+                              TextButton(
+                                onPressed: (() => Navigator.pop(context)),
+                                child: Text("Ok"),
+                              ),
+                            ],
+                          );
+                        },
+                      );
+                    } else if (emailController.text.trim() == "nhom12@gmail.com" && 
+                        passwordController.text.trim()=="123456") {
+                      showDialog(
+                        context: context,
+                        builder: (context) {
+                          return AlertDialog(
+                            title: Row(
+                              children: [
+                                Icon(Icons.info),
+                                SizedBox(
+                                  width: 10.0,
+                                ),
+                                Text("Đăng nhập"),
+                              ],
+                            ),
+                            content: Text(
+                              "Chúc mừng bạn đã đăng nhập thành công",
+                            ),
+                            actions: [
+                              TextButton(
+                                onPressed: (() => Navigator.pushReplacement(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => Myhome(),
+                                      ),
+                                    )),
+                                child: Text("Ok"),
+                              ),
+                            ],
+                          );
+                        },
+                      );
+                    } 
+                    else if (emailController.text.trim() != "nhom12@gmail.com"
+                        ) {
+                      showDialog(
+                        context: context,
+                        builder: (context) {
+                          return AlertDialog(
+                            title: Row(
+                              children: [
+                                Icon(Icons.warning),
+                                SizedBox(
+                                  width: 10.0,
+                                ),
+                                Text("Đăng nhập"),
+                              ],
+                            ),
+                            content: Text(
+                              "Đăng nhập thất bại",
+                            ),
+                            actions: [
+                              TextButton(
+                                onPressed: (() => Navigator.pop(context)),
+                                child: Text("Ok"),
+                              ),
+                            ],
+                          );
+                        },
+                      );
+                    } 
+                  // Navigator.push(
+                  //   context,
+                  //   MaterialPageRoute(builder: (context) => Myhome()),
+                  // );
                 },
                 child: Text(
                   'Login',

@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:dadd/screens/login.dart';
 //import 'package:google_fonts/google_fonts.dart';
 
-import 'myhome.dart';
+//import 'myhome.dart';
 
 class Register extends StatefulWidget {
   const Register({super.key});
@@ -18,9 +18,9 @@ class _RegisterState extends State<Register> {
   @override
   Widget build(BuildContext context) {
     bool isHide = true;
-    final userNameController = TextEditingController();
-    final passWordController = TextEditingController();
-    final confirmPasswordController = TextEditingController();
+    final emailController = TextEditingController();
+    final passwordController = TextEditingController();
+    //final confirmPasswordController = TextEditingController();
     // final _auth = FirebaseAuth.instance;
     return Scaffold(
       body: Container(
@@ -77,7 +77,7 @@ class _RegisterState extends State<Register> {
               //username
               padding: const EdgeInsets.fromLTRB(0, 0, 0, 40),
               child: TextField(
-                controller: userNameController,
+                controller: emailController,
                 style: TextStyle(
                   fontSize: 18,
                   color: Colors.green,
@@ -97,7 +97,7 @@ class _RegisterState extends State<Register> {
                 alignment: AlignmentDirectional.centerEnd,
                 children: <Widget>[
                   TextField(
-                    controller: passWordController,
+                    controller: passwordController,
                     style: TextStyle(
                       fontSize: 18,
                       color: Colors.green,
@@ -127,41 +127,41 @@ class _RegisterState extends State<Register> {
                 ],
               ),
             ),
-            Padding(
-              //confirm password
-              padding: const EdgeInsets.fromLTRB(0, 0, 0, 40),
-              child: Stack(
-                alignment: AlignmentDirectional.centerEnd,
-                children: <Widget>[
-                  TextField(
-                    controller: confirmPasswordController,
-                    style: TextStyle(
-                      fontSize: 18,
-                      color: Colors.green,
-                    ),
-                    obscureText: true,
-                    decoration: InputDecoration(
-                        labelText: "Confirm Password",
-                        labelStyle: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Color.fromARGB(255, 38, 38, 44),
-                            fontSize: 15)),
-                  ),
-                  Text(
-                    "Show",
-                    style: TextStyle(
-                        color: Colors.orange[600],
-                        fontWeight: FontWeight.bold,
-                        fontSize: 15),
-                  )
-                ],
-              ),
-            ),
+            // Padding(
+            //   //confirm password
+            //   padding: const EdgeInsets.fromLTRB(0, 0, 0, 40),
+            //   child: Stack(
+            //     alignment: AlignmentDirectional.centerEnd,
+            //     children: <Widget>[
+            //       TextField(
+            //         controller: confirmPasswordController,
+            //         style: TextStyle(
+            //           fontSize: 18,
+            //           color: Colors.green,
+            //         ),
+            //         obscureText: true,
+            //         decoration: InputDecoration(
+            //             labelText: "Confirm Password",
+            //             labelStyle: TextStyle(
+            //                 fontWeight: FontWeight.bold,
+            //                 color: Color.fromARGB(255, 38, 38, 44),
+            //                 fontSize: 15)),
+            //       ),
+            //       Text(
+            //         "Show",
+            //         style: TextStyle(
+            //             color: Colors.orange[600],
+            //             fontWeight: FontWeight.bold,
+            //             fontSize: 15),
+            //       )
+            //     ],
+            //   ),
+            // ),
             Container(
               padding: EdgeInsets.all(15),
               child: MaterialButton(
                 // onPressed: () async {
-                //   if (userNameController.text.isEmpty ||
+                //   if (emailController.text.isEmpty ||
                 //       passWordController.text.isEmpty ||
                 //       confirmPasswordController.text.isEmpty) {
                 //     ScaffoldMessenger.of(context).showSnackBar(
@@ -179,13 +179,13 @@ class _RegisterState extends State<Register> {
                 //   } else {
                 //     try {
                 //       final NewUser = _auth.createUserWithEmailAndPassword(
-                //           email: userNameController.text,
+                //           email: emailController.text,
                 //           password: passWordController.text);
 
                 //       Map<String, dynamic> data = {
                 //         "Coin": 0,
-                //         "email": userNameController.text,
-                //         "name": userNameController.text,
+                //         "email": emailController.text,
+                //         "name": emailController.text,
                 //         "password": passWordController.text
                 //       };
                 //       FirebaseFirestore.instance.collection("users").add(data);
@@ -206,10 +206,92 @@ class _RegisterState extends State<Register> {
                 //   }
                 // },
                 onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => Myhome()),
-                  );
+                  if (emailController.text.trim() == '' ||
+                        passwordController.text.trim() == '') {
+                      showDialog(
+                        context: context,
+                        builder: (context) {
+                          return AlertDialog(
+                            title: Row(
+                              children: [
+                                Icon(Icons.warning),
+                                SizedBox(
+                                  width: 10.0,
+                                ),
+                                Text("Đăng ký"),
+                              ],
+                            ),
+                            content: Text(
+                              "Đăng ký thất bại",
+                            ),
+                            actions: [
+                              TextButton(
+                                onPressed: (() => Navigator.pop(context)),
+                                child: Text("Ok"),
+                              ),
+                            ],
+                          );
+                        },
+                      );
+                    } else if (emailController.text.trim() == "nhom12@gmail.com" && 
+                        passwordController.text.trim()=="123456") {
+                      showDialog(
+                        context: context,
+                        builder: (context) {
+                          return AlertDialog(
+                            title: Row(
+                              children: [
+                                Icon(Icons.info),
+                                SizedBox(
+                                  width: 10.0,
+                                ),
+                                Text("Đăng ký"),
+                              ],
+                            ),
+                            content: Text(
+                              "Chúc mừng bạn đã đăng ký thành công",
+                            ),
+                            actions: [
+                              TextButton(
+                                onPressed: (() => Navigator.pushReplacement(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => Login(),
+                                      ),
+                                    )),
+                                child: Text("Ok"),
+                              ),
+                            ],
+                          );
+                        },
+                      );
+                    } else if (emailController.text.trim() != "nhom12@gmail.com" ) {
+                      showDialog(
+                        context: context,
+                        builder: (context) {
+                          return AlertDialog(
+                            title: Row(
+                              children: [
+                                Icon(Icons.warning),
+                                SizedBox(
+                                  width: 10.0,
+                                ),
+                                Text("Đăng ký"),
+                              ],
+                            ),
+                            content: Text(
+                              "Đăng ký thất bại",
+                            ),
+                            actions: [
+                              TextButton(
+                                onPressed: (() => Navigator.pop(context)),
+                                child: Text("Ok"),
+                              ),
+                            ],
+                          );
+                        },
+                      );
+                    } 
                 },
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10.0),
