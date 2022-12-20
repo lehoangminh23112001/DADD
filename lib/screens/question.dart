@@ -1,5 +1,5 @@
 import 'package:dadd/constants.dart';
-import 'package:dadd/models/db_connect.dart';
+
 import 'package:dadd/models/question_model.dart';
 import 'package:dadd/widgets/next_button.dart';
 import 'package:dadd/widgets/option_card.dart';
@@ -20,20 +20,125 @@ class _questioncreenState extends State<QuestionScreen> {
   //var db = DBconnect();
   List<Question> _question = [
     Question(
-      id: '10',
-      title:
-          'Cho 3 chất glucozo, axit axetic, glixerol. Để phân biệt 3 chất trên chỉ cần dùng 2 hóa chất là ?',
+      id: '1',
+      title: 'Nhận định nào sau đây không đúng về kim loại kiềm ?',
       options: {
-        'Dung dịch Na2CO3 và Na': false,
-        'Ag/NH3 và quỳ tím': false,
-        'Dd NaHCO3 và dd AgNO3': true,
-        'Quỳ tím và Na': false
+        'Đều có cấu tạo mạng tinh thể giống nhau: lập phương tâm khối.': false,
+        'Dễ bị oxi hóa.': false,
+        'Năng lượng ion hóa thứ nhất của các nguyên tử kim loại kiềm thấp hơn so với các nguyên tố khác trong cùng chu kì.':
+            false,
+        'Là những nguyên tố mà nguyên tử có 1 e ở phân lớp p.': true
       },
     ),
     Question(
-      id: '11',
-      title: 'What is 10 + 20?',
-      options: {'20': false, '30': true, '40': false, '100': false},
+      id: '2',
+      title:
+          'Khi điều chế Na, người ta điện phân nóng chảy NaCl với anot làm bằng:',
+      options: {'thép': false, 'nhôm': false, 'than chì': true, 'Magie': false},
+    ),
+    Question(
+      id: '3',
+      title:
+          'Khi cho kim loại Na vào dung dịch CuSO4 thì sẽ xảy ra hiện tượng nào sau đây ?',
+      options: {
+        'Ban đầu có xuất hiện kết tủa xanh, sau đó kết tủa tan ra, dung dịch trong suốt.':
+            false,
+        'Ban đầu có sủi bọt khí, sau đó xuất hiện kết tủa xanh.': true,
+        'Ban đầu có sủi bọt khí, sau đó có tạo kết tủa xanh, rồi kết tủa tan ra, dung dịch trong suốt.':
+            false,
+        'Chỉ có sủi bọt khí.': false
+      },
+    ),
+    Question(
+      id: '4',
+      title:
+          'Phương pháp điều chế kim loại kiềm là:',
+      options: {
+        'Khử oxit kim loại kiềm bằng chất khử CO.':
+            false,
+        'Điện phân nóng chảy muối halogenua hoặc hiđroxit của chúng.': true,
+        'Điện phân dung dịch muối halogenua.':
+            false,
+        'Cho Al tác dụng với dung dịch muối của kim loại kiềm .': false
+      },
+    ),
+    Question(
+      id: '5',
+      title:
+          'Trong chế tạo ruột phích người ta thường dùng phương pháp nào sau đây:',
+      options: {
+        'Cho axetilen tác dụng với dung dịch AgNO3/NH3':
+            false,
+        'Cho anđehit fomic tác dụng với dung dịch AgNO3/NH3': false,
+        'Cho axit fomic tác dụng với dung dịch AgNO3/NH3':
+            false,
+        ' Cho glucozơ tác dụng với dung dịch AgNO3/NH3': true
+      },
+    ),
+    Question(
+      id: '6',
+      title:
+          'Khi thuỷ phân saccarozo, sản phẩm thu được là',
+      options: {
+        'glucozo và fructozo.':
+            true,
+        'glucozo.': false,
+        'fructozo.':
+            false,
+        'tinh bột.': false
+      },
+    ),
+    Question(
+      id: '7',
+      title:
+          'Nhận xét nào dưới đây là đúng khi so sánh giữa xenlulozo và tinh bột ?',
+      options: {
+        'Xenlulozo có phân tử khối lớn hơn nhiều so với tinh bột.':
+            true,
+        'Xenlulozơ và tinh bột khi cháy đều thu được số mol CO2 bằng số mol H2O.': false,
+        'Xenlulozơ có cấu trúc phân nhánh, còn tinh bột có cấu trúc thẳng.':
+            false,
+        'Xenlulozo và tinh bột đều tan trong nước nóng.': false
+      },
+    ),
+    Question(
+      id: '8',
+      title:
+          'Có thể phân biệt xenlulozơ với tinh bột nhờ phản ứng',
+      options: {
+        'với axit H5SO4.':
+            false,
+        'với kiềm.': false,
+        'với dung dịch iot':
+            true,
+        'thuỷ phân': false
+      },
+    ),
+    Question(
+      id: '9',
+      title:
+          'Nhóm chất đều tham gia phản ứng thuỷ phân là',
+      options: {
+        'saccarozơ, fructozơ, glucozơ':
+            false,
+        'saccarozơ, fructozơ, xenlulozơ.': false,
+        'saccarozơ, tinh bột, xenlulozơ':
+            true,
+        'saccarozơ, glucozơ, tinh bột.': false
+      },
+    ),
+    Question(
+      id: '10',
+      title:
+          'Este có mùi chuối chín là',
+      options: {
+        'isoamyl axetat.':
+            true,
+        'etyl butirat.': false,
+        'benzyl axetat.':
+            false,
+        'geranyl axetat.': false
+      },
     ),
   ];
   // late Future _question;
@@ -57,7 +162,7 @@ class _questioncreenState extends State<QuestionScreen> {
   void checkAnswerAndUpdate(bool isCorrect) {
     if (isCorrect && !isPressed) {
       point++;
-      coin++;
+      coin += 100;
     }
     setState(() {
       isPressed = true;
@@ -314,7 +419,7 @@ class _questioncreenState extends State<QuestionScreen> {
           color: Color.fromARGB(255, 36, 142, 229).withOpacity(0.8),
         ),
         child: nextButton(
-           nextQuestion: nextQuestion,
+          nextQuestion: nextQuestion,
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,

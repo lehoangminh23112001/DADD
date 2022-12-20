@@ -1,9 +1,13 @@
 import 'package:dadd/constants.dart';
+import 'package:dadd/screens/myhome.dart';
 import 'package:flutter/material.dart';
 
 class ResultBox extends StatelessWidget {
   const ResultBox(
-      {super.key, required this.result, required this.questionLength, required this.onPressed});
+      {super.key,
+      required this.result,
+      required this.questionLength,
+      required this.onPressed});
   final int result;
   final int questionLength;
   final VoidCallback onPressed;
@@ -60,7 +64,24 @@ class ResultBox extends StatelessWidget {
                 'Start Over',
                 style: TextStyle(
                     color: Colors.blue,
-                    fontSize: 26.0,
+                    fontSize: 23.0,
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 1.0),
+              ),
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            GestureDetector(
+              onTap: (){
+                Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Myhome()));
+              },
+              child: Text(
+                'Home',
+                style: TextStyle(
+                    color: Colors.blue,
+                    fontSize: 23.0,
                     fontWeight: FontWeight.bold,
                     letterSpacing: 1.0),
               ),

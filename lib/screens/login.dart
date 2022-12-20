@@ -1,6 +1,7 @@
 //import 'dart:ui';
 
 //import 'package:firebase_auth/firebase_auth.dart';
+import 'package:dadd/screens/myhome.dart';
 import 'package:flutter/material.dart';
 //import 'package:dadd/screens/myhome.dart';
 
@@ -132,14 +133,14 @@ class Login extends StatelessWidget {
                 color: Colors.green,
                 minWidth: 500,
                 height: 50,
-                onPressed: (){},
+                //onPressed: (){},
                 //onPressed: signIn,
-                // onPressed: () {
-                //   Navigator.push(
-                //     context,
-                //     MaterialPageRoute(builder: (context) => Myhome()),
-                //   );
-                // },
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Myhome()),
+                  );
+                },
                 child: Text(
                   'Login',
                   style: TextStyle(

@@ -1,5 +1,8 @@
 //import 'dart:ui';
 
+import 'package:dadd/screens/friend.dart';
+import 'package:dadd/screens/login.dart';
+import 'package:dadd/screens/setting.dart';
 import 'package:flutter/material.dart';
 import 'package:dadd/screens/bag.dart';
 import 'package:dadd/screens/challenge.dart';
@@ -47,6 +50,11 @@ class Myhome extends StatelessWidget {
                   child: Container(),
                 ),
                 GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => SettingScreen()));
+                  },
                   child: CircleAvatar(
                     radius: 22,
                     backgroundColor: Colors.white,
@@ -62,7 +70,8 @@ class Myhome extends StatelessWidget {
                 ),
                 GestureDetector(
                   onTap: () {
-                    Navigator.pop(context);
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Login()));
                   },
                   child: CircleAvatar(
                     radius: 22,
@@ -194,20 +203,28 @@ class Myhome extends StatelessWidget {
                   Container(
                     child: Column(
                       children: [
-                        CircleAvatar(
-                          radius: 22,
-                          backgroundColor: Colors.white,
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => FriendScreen()));
+                          },
                           child: CircleAvatar(
-                            child: Container(
-                              width: 28,
-                              color: Colors.green.withOpacity(0.9),
-                              child: Image.asset(
-                                "img/twouser.png",
-                                fit: BoxFit.cover,
+                            radius: 22,
+                            backgroundColor: Colors.white,
+                            child: CircleAvatar(
+                              child: Container(
+                                width: 28,
+                                color: Colors.green.withOpacity(0.9),
+                                child: Image.asset(
+                                  "img/twouser.png",
+                                  fit: BoxFit.cover,
+                                ),
                               ),
+                              radius: 20,
+                              backgroundColor: Colors.green.withOpacity(0.9),
                             ),
-                            radius: 20,
-                            backgroundColor: Colors.green.withOpacity(0.9),
                           ),
                         ),
                       ],

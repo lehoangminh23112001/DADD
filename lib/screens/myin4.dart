@@ -81,28 +81,20 @@ class Myin4 extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => Topic()),
-                    );
-                  },
-                  child: Container(
-                    width: 75,
-                    height: 20,
-                    decoration: BoxDecoration(
-                      color: Colors.green,
-                      borderRadius: BorderRadius.circular(100),
-                    ),
-                    child: Center(
-                      child: Text(
-                        "Thông tin",
-                        style: TextStyle(
-                            fontSize: 12,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      ),
+                Container(
+                  width: 75,
+                  height: 20,
+                  decoration: BoxDecoration(
+                    color: Colors.green,
+                    borderRadius: BorderRadius.circular(100),
+                  ),
+                  child: Center(
+                    child: Text(
+                      "Thông tin",
+                      style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white),
                     ),
                   ),
                 ),

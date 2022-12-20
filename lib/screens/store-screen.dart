@@ -14,6 +14,7 @@ class _StoreScreenState extends State<StoreScreen> {
   var rua = 'img/rua.jpg';
   var ice = 'img/ice.jpg';
   var bomb = 'img/bomb.jpg';
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -114,7 +115,9 @@ class _StoreScreenState extends State<StoreScreen> {
                           margin: EdgeInsets.only(left: 80),
                           child: ElevatedButton(
                             
-                            onPressed: () {},
+                            onPressed: () {
+
+                            },
                             child: Text(
                               '20.000',
                               style: TextStyle(color: Colors.black),
@@ -176,7 +179,9 @@ class _StoreScreenState extends State<StoreScreen> {
                         Container(
                           margin: EdgeInsets.only(left: 80),
                           child: ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+
+                            },
                             child: Text(
                               '50.000',
                               style: TextStyle(color: Colors.black),
