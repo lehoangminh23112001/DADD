@@ -220,30 +220,36 @@ class _questioncreenState extends State<QuestionScreen> {
         ),
         child: Column(
           children: <Widget>[
-            Stack(
-              //LOGO
-              children: <Widget>[
-                // Stroked text as border.
-                Text(
-                  'Quiz & Quick',
-                  style: TextStyle(
-                    fontSize: 40,
-                    foreground: Paint()
-                      ..style = PaintingStyle.stroke
-                      ..strokeWidth = 6
-                      ..color = Colors.blue[700]!,
-                  ),
-                ),
-                // Solid text as fill.
-                Text(
-                  'Quiz & Quick',
-                  style: TextStyle(
-                    fontSize: 40,
-                    color: Colors.yellow[300],
-                  ),
-                ),
-              ],
+            Container(
+              width: 300,
+              height: 100,
+              decoration: BoxDecoration(
+                  image: DecorationImage(image: AssetImage("img/logo.png"))),
             ),
+            // Stack(
+            //   //LOGO
+            //   children: <Widget>[
+            //     // Stroked text as border.
+            //     Text(
+            //       'Quiz & Quick',
+            //       style: TextStyle(
+            //         fontSize: 40,
+            //         foreground: Paint()
+            //           ..style = PaintingStyle.stroke
+            //           ..strokeWidth = 6
+            //           ..color = Colors.blue[700]!,
+            //       ),
+            //     ),
+            //     // Solid text as fill.
+            //     Text(
+            //       'Quiz & Quick',
+            //       style: TextStyle(
+            //         fontSize: 40,
+            //         color: Colors.yellow[300],
+            //       ),
+            //     ),
+            //   ],
+            // ),
             SizedBox(
               height: 20,
             ),
@@ -414,9 +420,10 @@ class _questioncreenState extends State<QuestionScreen> {
         ),
       ),
       floatingActionButton: Container(
-        width: 300,
+        width: 325,
         decoration: BoxDecoration(
           color: Color.fromARGB(255, 36, 142, 229).withOpacity(0.8),
+          borderRadius: BorderRadius.circular(20),
         ),
         child: nextButton(
           nextQuestion: nextQuestion,

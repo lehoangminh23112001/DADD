@@ -42,41 +42,47 @@ class Login extends StatelessWidget {
         ),
         child: Column(
           children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.all(40.0),
-              child: Container(
-                  width: 70,
-                  height: 70,
-                  padding: EdgeInsets.all(15),
-                  decoration:
-                      BoxDecoration(shape: BoxShape.circle, color: Colors.green
-                          //children Image.asset('../img/user.png'),
-                          ),
-                  child: CircleAvatar()),
+            // Padding(
+            //   padding: const EdgeInsets.all(40.0),
+            //   child: Container(
+            //       width: 70,
+            //       height: 70,
+            //       padding: EdgeInsets.all(15),
+            //       decoration:
+            //           BoxDecoration(shape: BoxShape.circle, color: Colors.green
+            //               //children Image.asset('../img/user.png'),
+            //               ),
+            //       child: CircleAvatar()),
+            // ),
+            Container(
+              width: 300,
+              height: 300,
+              decoration: BoxDecoration(
+                  image: DecorationImage(image: AssetImage("img/logo.png"))),
             ),
-            Stack(
-              children: <Widget>[
-                // Stroked text as border.
-                Text(
-                  'Quiz &\nQuick',
-                  style: TextStyle(
-                    fontSize: 40,
-                    foreground: Paint()
-                      ..style = PaintingStyle.stroke
-                      ..strokeWidth = 6
-                      ..color = Colors.blue[700]!,
-                  ),
-                ),
-                // Solid text as fill.
-                Text(
-                  'Quiz &\nQuick',
-                  style: TextStyle(
-                    fontSize: 40,
-                    color: Colors.yellow[300],
-                  ),
-                ),
-              ],
-            ),
+            // Stack(
+            //   children: <Widget>[
+            //     // Stroked text as border.
+            //     Text(
+            //       'Quiz &\nQuick',
+            //       style: TextStyle(
+            //         fontSize: 40,
+            //         foreground: Paint()
+            //           ..style = PaintingStyle.stroke
+            //           ..strokeWidth = 6
+            //           ..color = Colors.blue[700]!,
+            //       ),
+            //     ),
+            //     // Solid text as fill.
+            //     Text(
+            //       'Quiz &\nQuick',
+            //       style: TextStyle(
+            //         fontSize: 40,
+            //         color: Colors.yellow[300],
+            //       ),
+            //     ),
+            //   ],
+            // ),
             Padding(
               //username
               padding: const EdgeInsets.fromLTRB(0, 0, 0, 40),

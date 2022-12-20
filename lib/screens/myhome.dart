@@ -88,29 +88,35 @@ class Myhome extends StatelessWidget {
             SizedBox(
               height: 50,
             ),
-            Stack(
-              children: <Widget>[
-                // Stroked text as border.
-                Text(
-                  'Quiz & Quick',
-                  style: TextStyle(
-                    fontSize: 40,
-                    foreground: Paint()
-                      ..style = PaintingStyle.stroke
-                      ..strokeWidth = 6
-                      ..color = Colors.blue[700]!,
-                  ),
-                ),
-                // Solid text as fill.
-                Text(
-                  'Quiz & Quick',
-                  style: TextStyle(
-                    fontSize: 40,
-                    color: Colors.yellow[300],
-                  ),
-                ),
-              ],
+            Container(
+              width: 300,
+              height: 125,
+              decoration: BoxDecoration(
+                  image: DecorationImage(image: AssetImage("img/logo.png"))),
             ),
+            // Stack(
+            //   children: <Widget>[
+            //     // Stroked text as border.
+            //     Text(
+            //       'Quiz & Quick',
+            //       style: TextStyle(
+            //         fontSize: 40,
+            //         foreground: Paint()
+            //           ..style = PaintingStyle.stroke
+            //           ..strokeWidth = 6
+            //           ..color = Colors.blue[700]!,
+            //       ),
+            //     ),
+            //     // Solid text as fill.
+            //     Text(
+            //       'Quiz & Quick',
+            //       style: TextStyle(
+            //         fontSize: 40,
+            //         color: Colors.yellow[300],
+            //       ),
+            //     ),
+            //   ],
+            // ),
             SizedBox(
               height: 100,
             ),

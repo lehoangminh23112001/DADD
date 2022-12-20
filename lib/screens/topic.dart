@@ -20,28 +20,11 @@ class Topic extends StatelessWidget {
         ),
         child: Column(
           children: <Widget>[
-            Stack(
-              children: <Widget>[
-                // Stroked text as border.
-                Text(
-                  'Quiz & Quick',
-                  style: TextStyle(
-                    fontSize: 40,
-                    foreground: Paint()
-                      ..style = PaintingStyle.stroke
-                      ..strokeWidth = 6
-                      ..color = Colors.blue[700]!,
-                  ),
-                ),
-                // Solid text as fill.
-                Text(
-                  'Quiz & Quick',
-                  style: TextStyle(
-                    fontSize: 40,
-                    color: Colors.yellow[300],
-                  ),
-                ),
-              ],
+            Container(
+              width: 300,
+              height: 150,
+              decoration: BoxDecoration(
+                  image: DecorationImage(image: AssetImage("img/logo.png"))),
             ),
             SizedBox(
               height: 30,

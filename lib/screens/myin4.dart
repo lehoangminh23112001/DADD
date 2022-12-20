@@ -90,7 +90,7 @@ class Myin4 extends StatelessWidget {
                   ),
                   child: Center(
                     child: Text(
-                      "Thông tin",
+                      "Profile",
                       style: TextStyle(
                           fontSize: 12,
                           fontWeight: FontWeight.bold,
@@ -110,7 +110,7 @@ class Myin4 extends StatelessWidget {
                   ),
                   child: Center(
                     child: Text(
-                      "Lịch sử",
+                      "History",
                       style: TextStyle(
                           fontSize: 12,
                           fontWeight: FontWeight.bold,
@@ -122,7 +122,7 @@ class Myin4 extends StatelessWidget {
                   height: 20,
                 ),
                 Container(
-                  width: 75,
+                  width: 100,
                   height: 20,
                   decoration: BoxDecoration(
                     color: Colors.green,
@@ -130,7 +130,7 @@ class Myin4 extends StatelessWidget {
                   ),
                   child: Center(
                     child: Text(
-                      "BXH",
+                      "Ranked Board",
                       style: TextStyle(
                           fontSize: 12,
                           fontWeight: FontWeight.bold,
@@ -163,15 +163,18 @@ class Myin4 extends StatelessWidget {
                           ),
                         ),
                         SizedBox(
-                          width: 20,
+                          width: 30,
+                          
                         ),
                         Container(
                           child: Text(
-                            "ID: 1001002\nTài khoản: Username\nPoint: 999\nNgày tạo: 13/11/2022",
+                            "ID: 1001002\nAccount: Username\nCoin: 999\nCreate Date: 13/11/2022",
                             style: TextStyle(
                               fontFamily: 'Raleway',
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
+                              
+                              
                             ),
                           ),
                         ),
@@ -181,7 +184,7 @@ class Myin4 extends StatelessWidget {
                       height: 100,
                     ),
                     Padding(
-                      padding: EdgeInsets.fromLTRB(200, 0, 0, 0),
+                      padding: EdgeInsets.fromLTRB(230, 0, 0, 0),
                       child: CircleAvatar(
                         radius: 22,
                         backgroundColor: Colors.white,

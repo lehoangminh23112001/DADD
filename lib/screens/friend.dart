@@ -111,7 +111,7 @@ class _FriendScreenState extends State<FriendScreen> {
                 child: Image.asset(
                   'img/logo.png',
                   height: 300,
-                  width: 500,
+                  width: 300,
                 ),
               ),
               Container(
@@ -168,14 +168,14 @@ class _FriendScreenState extends State<FriendScreen> {
                             'aaaa',
                             style: TextStyle(
                                 color: Colors.lime,
-                                fontSize: 23,
+                                fontSize: 18,
                                 fontWeight: FontWeight.bold),
                           ),
                           subtitle: Text(
                             'Đang hoạt động',
                             style: TextStyle(
                                 color: Colors.lime,
-                                fontSize: 23,
+                                fontSize: 18,
                                 fontWeight: FontWeight.bold),
                           ),
                           trailing: IconButton(

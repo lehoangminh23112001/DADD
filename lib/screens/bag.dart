@@ -243,148 +243,153 @@ class _BagScreenState extends State<BagScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
+      
       body: Container(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            SizedBox(
-              height: 15,
-            ),
-            Container(
-              margin: EdgeInsets.only(
-                right: 15,
+        
+        child: Padding(
+          padding: EdgeInsets.fromLTRB(12, 25, 12, 12),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(
+                height: 15,
               ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.pop(context);
-                    },
-                    child: CircleAvatar(
-                        backgroundColor: Colors.white,
-                        radius: 20,
-                        child: CircleAvatar(
-                          backgroundColor: Colors.lime,
-                          radius: 18,
-                          child: Icon(
-                            Icons.logout,
-                            color: Colors.black,
-                          ),
-                        )),
-                  ),
-                ],
-              ),
-            ),
-            SizedBox(
-              height: 45,
-            ),
-            Container(
-                padding: EdgeInsets.all(20),
-                width: double.infinity,
-                height: 300,
-                margin: EdgeInsets.only(right: 30, left: 30),
-                decoration: BoxDecoration(
-                  border: Border.all(color: Colors.lime, width: 5),
-                  borderRadius: BorderRadius.all(Radius.circular(25)),
+              Container(
+                margin: EdgeInsets.only(
+                  right: 15,
                 ),
-                child: ListView(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    ListTile(
-                      leading: Image.asset('img/rua.png'),
-                      title: Text(
-                        'Con rùa',
-                        style: TextStyle(
-                            color: Colors.lime,
-                            fontSize: 23,
-                            fontWeight: FontWeight.bold),
-                      ),
-                      subtitle: Text(
-                        '12',
-                        style: TextStyle(
-                            color: Colors.lime,
-                            fontSize: 23,
-                            fontWeight: FontWeight.bold),
-                      ),
-                      trailing: IconButton(
-                          onPressed: () {},
-                          icon: Icon(
-                            Icons.add,
-                            color: Colors.lime,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
+                      child: CircleAvatar(
+                          backgroundColor: Colors.white,
+                          radius: 20,
+                          child: CircleAvatar(
+                            backgroundColor: Colors.lime,
+                            radius: 18,
+                            child: Icon(
+                              Icons.logout,
+                              color: Colors.black,
+                            ),
                           )),
                     ),
-                    ListTile(
-                      leading: Image.asset('img/xucsac.png'),
-                      title: Text(
-                        'Xúc sắc ma thuật',
-                        style: TextStyle(
-                            color: Colors.lime,
-                            fontSize: 23,
-                            fontWeight: FontWeight.bold),
-                      ),
-                      subtitle: Text(
-                        '12',
-                        style: TextStyle(
-                            color: Colors.lime,
-                            fontSize: 23,
-                            fontWeight: FontWeight.bold),
-                      ),
-                      trailing: IconButton(
-                          onPressed: () {},
-                          icon: Icon(
-                            Icons.add,
-                            color: Colors.lime,
-                          )),
-                    ),
-                    ListTile(
-                      leading: Image.asset('img/ice.png'),
-                      title: Text(
-                        'Băng giá vĩnh cữu',
-                        style: TextStyle(
-                            color: Colors.lime,
-                            fontSize: 23,
-                            fontWeight: FontWeight.bold),
-                      ),
-                      subtitle: Text(
-                        '1',
-                        style: TextStyle(
-                            color: Colors.lime,
-                            fontSize: 23,
-                            fontWeight: FontWeight.bold),
-                      ),
-                      trailing: IconButton(
-                          onPressed: () {},
-                          icon: Icon(
-                            Icons.add,
-                            color: Colors.lime,
-                          )),
-                    ),
-                    ListTile(
-                      leading: Image.asset('img/bomb.png'),
-                      title: Text(
-                        'Bom hạt nhân',
-                        style: TextStyle(
-                            color: Colors.lime,
-                            fontSize: 23,
-                            fontWeight: FontWeight.bold),
-                      ),
-                      subtitle: Text(
-                        '11',
-                        style: TextStyle(
-                            color: Colors.lime,
-                            fontSize: 23,
-                            fontWeight: FontWeight.bold),
-                      ),
-                      trailing: IconButton(
-                          onPressed: () {},
-                          icon: Icon(
-                            Icons.add,
-                            color: Colors.lime,
-                          )),
-                    )
                   ],
-                )),
-          ],
+                ),
+              ),
+              SizedBox(
+                height: 45,
+              ),
+              Container(
+                  padding: EdgeInsets.all(20),
+                  width: double.infinity,
+                  height: 600,
+                  margin: EdgeInsets.only(right: 30, left: 30),
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.lime, width: 5),
+                    borderRadius: BorderRadius.all(Radius.circular(25)),
+                  ),
+                  child: ListView(
+                    children: [
+                      ListTile(
+                        leading: Image.asset('img/rua.png'),
+                        title: Text(
+                          'Con rùa',
+                          style: TextStyle(
+                              color: Colors.lime,
+                              fontSize: 23,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        subtitle: Text(
+                          '12',
+                          style: TextStyle(
+                              color: Colors.lime,
+                              fontSize: 23,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        trailing: IconButton(
+                            onPressed: () {},
+                            icon: Icon(
+                              Icons.add,
+                              color: Colors.lime,
+                            )),
+                      ),
+                      ListTile(
+                        leading: Image.asset('img/xucsac.png'),
+                        title: Text(
+                          'Xúc sắc ma thuật',
+                          style: TextStyle(
+                              color: Colors.lime,
+                              fontSize: 23,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        subtitle: Text(
+                          '12',
+                          style: TextStyle(
+                              color: Colors.lime,
+                              fontSize: 23,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        trailing: IconButton(
+                            onPressed: () {},
+                            icon: Icon(
+                              Icons.add,
+                              color: Colors.lime,
+                            )),
+                      ),
+                      ListTile(
+                        leading: Image.asset('img/ice.png'),
+                        title: Text(
+                          'Băng giá vĩnh cữu',
+                          style: TextStyle(
+                              color: Colors.lime,
+                              fontSize: 23,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        subtitle: Text(
+                          '1',
+                          style: TextStyle(
+                              color: Colors.lime,
+                              fontSize: 23,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        trailing: IconButton(
+                            onPressed: () {},
+                            icon: Icon(
+                              Icons.add,
+                              color: Colors.lime,
+                            )),
+                      ),
+                      ListTile(
+                        leading: Image.asset('img/bomb.png'),
+                        title: Text(
+                          'Bom hạt nhân',
+                          style: TextStyle(
+                              color: Colors.lime,
+                              fontSize: 23,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        subtitle: Text(
+                          '11',
+                          style: TextStyle(
+                              color: Colors.lime,
+                              fontSize: 23,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        trailing: IconButton(
+                            onPressed: () {},
+                            icon: Icon(
+                              Icons.add,
+                              color: Colors.lime,
+                            )),
+                      )
+                    ],
+                  )),
+            ],
+          ),
         ),
       ),
     );

@@ -9,7 +9,7 @@ class nextButton extends StatelessWidget {
       onTap: nextQuestion,
       child: Container(
         padding: EdgeInsets.all(15),
-                child: Text('                     Next Question',style: TextStyle(
+                child: Text('                        Next Question',style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
                           color: Colors.white),),

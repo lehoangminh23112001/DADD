@@ -39,7 +39,7 @@ class Welcome extends StatelessWidget {
         constraints: BoxConstraints.expand(),
         decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage("img/background1.jpg"), fit: BoxFit.cover),
+              image: AssetImage("img/welcome.gif"), fit: BoxFit.cover),
         ),
         child: Column(
           children: <Widget>[
